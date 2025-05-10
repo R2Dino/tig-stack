@@ -409,7 +409,7 @@ function checkup_influx {
     	sleep 2
     	echo -n "."
 	done
-	docker exec -i influxdb influx setup \
+	sudo docker exec -i influxdb influx setup \
 				--username "$user" \
 				--password "$pass" \
 				--token "$token" \
