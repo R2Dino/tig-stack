@@ -142,6 +142,8 @@ function check_os {
 		fi
 	elif [[ "$OS" == "alpine" ]]; then
 		PKG_MGR="apk"
+	elif [[ "$OS" == "sles"]]; then
+		PKG_MGR="zypper"
 	else
 		echo "Unsupported OS: $OS"
 		exit 1
