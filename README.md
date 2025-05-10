@@ -1,26 +1,39 @@
-# TIG Stack - Monitoring System with Telegraf, InfluxDB, and Grafana
-This repository provides a simple setup script to deploy a TIG Stack (Telegraf, InfluxDB, Grafana) using Docker and Docker Compose.
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N41E59SA)
 
-# What's Included
-Telegraf – Metrics collection agent
+# TIG Stack – Monitoring System with Telegraf, InfluxDB, and Grafana
 
-InfluxDB – Time-series database
+This repository provides an automated setup for deploying a TIG Stack—**Telegraf**, **InfluxDB**, and **Grafana**—using **Docker** and **Docker Compose**. It's designed to help you quickly build a modern, efficient monitoring system for collecting, storing, and visualizing time-series data.
 
-Grafana – Visualization and dashboard platform
+---
 
-Installation Script (tig-setup.sh) – Helps install the latest versions of Docker and Docker Compose automatically
+## What's Included
 
-The docker-compose.yml file will set up all necessary services and automatically generate the following environment files:
+- **Telegraf** – Agent for collecting and reporting system and application metrics  
+- **InfluxDB** – High-performance time-series database for storing metrics  
+- **Grafana** – Powerful visualization and dashboard platform  
+- **Setup Script (`tig-setup.sh`)** – Automatically installs the latest versions of Docker and Docker Compose, then sets up the entire TIG stack
 
-.env.influxdb-admin-username
+The setup also generates the following environment files to securely store credentials and tokens:
 
-.env.influxdb-admin-password
+- `.env.influxdb-admin-username`  
+- `.env.influxdb-admin-password`  
+- `.env.influxdb-admin-token`
 
-.env.influxdb-admin-token
+---
 
-These files store your InfluxDB admin credentials and token securely.
+## Getting Started
+### 1. Clone repository
 
-# How to use
+```bash
+git clone https://github.com/R2Dino/tig-stack.git
+```
+### 2. Make the setup script executable:
+
+```bash
 chmod +x tig-setup.sh
+```
 
+### 3. Execute script
+```bash
 ./tig-setup.sh
+```
