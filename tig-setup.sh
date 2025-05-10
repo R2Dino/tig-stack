@@ -144,7 +144,7 @@ function check_os {
 		PKG_MGR="apk"
 	else
 		echo "Unsupported OS: $OS"
-		return 1
+		exit 1
 	fi
 }
 
