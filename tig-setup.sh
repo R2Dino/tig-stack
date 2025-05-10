@@ -322,10 +322,21 @@ function generate_envfile {
 	if [ ! -f .env.influxdb-admin-username ]; then
 		echo "$admuser" > .env.influxdb-admin-username
 	fi
-	read -s -p "InfluxDB admin password : " admpass
+	while true; do
+		read -s -p "InfluxDB admin password (8-72 chars): " admpass
+		echo
+		len=${#admpass}
+		if [ "$len" -ge 8 ] && [ "$len" -le 72 ]; then
+			break
+		else
+			echo "Password length must be between 8 and 72 characters."
+		fi
+	done
+	
 	if [ ! -f .env.influxdb-admin-password ]; then
 		echo "$admpass" > .env.influxdb-admin-password
 	fi
+	
 	echo "InfluxDB Token = $INFLUX_TOKEN"
 	if [ ! -f gentoken ]; then
 		cat <<EOF | tee .env.influxdb-admin-token > /dev/null
