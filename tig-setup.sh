@@ -430,3 +430,4 @@ checkup_influx
 
 echo "InfluxDB token = $INFLUX_TOKEN"
 echo "Please check $HOST_URL and get .env* for credentials"
+echo "Installation docker, docker compose, telegraf, influxdb, grafana finished"
