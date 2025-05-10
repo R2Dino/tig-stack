@@ -394,7 +394,7 @@ EONG
 
 # Run Docker compose
 function rundocker {
-	docker compose up -d
+	sudo docker compose up -d
 }
 
 function checkup_influx {
