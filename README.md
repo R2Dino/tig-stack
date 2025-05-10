@@ -38,7 +38,10 @@ chmod +x tig-setup.sh
 ./tig-setup.sh
 ```
 ### 4. Change Default Password of Grafana
-** Open web browser and connect to grafana via port 3000 **
-** Example: https://localhost:3000 **
-** Default user: admin **
-** Default password: admin **
+Open web browser and connect to grafana via port 3000
+
+Example: https://localhost:3000
+
+Default user: admin
+
+Default password: admin
