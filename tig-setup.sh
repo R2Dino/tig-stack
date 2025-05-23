@@ -305,7 +305,7 @@ EOF
 		if [ ! -f telegraf-config/telegraf.d/000-influxdb.conf ]; then
 			cat <<EOF | tee telegraf-config/telegraf.d/000-influxdb.conf
 [[outputs.influxdb_v2]]
-  urls = ["http://localhost:8086"]
+  urls = ["http://influxdb:8086"]
   token = "$RDTOKEN"
   organization = "$ORG"
   bucket = "$BUCKET"
